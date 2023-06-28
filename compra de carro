@@ -1,0 +1,66 @@
+
+public class Carro {
+	
+	private String condicoa;
+	 private int preco=10000;
+	
+public void setcondicao(String condicao) {
+	
+	this.condicoa =condicao;
+	
+}	
+public void getcondicao(double valor) {
+	
+	
+System.out.println("moastra valor do carro " + preco);
+
+}
+
+public void dinheiro(boolean dinheiro,boolean credito,boolean boleto) {
+	
+	if(dinheiro) {
+		int desconto=600;
+		preco-=desconto;
+		
+		System.out.println("parabens pela compra e, dinheiro " + preco);
+	
+	
+	}else if(credito) {
+	
+		int juros =300;
+		preco+=juros;
+		
+		System.out.println("parabens pela compra do carro no credito " + preco);
+		
+	}else if(boleto) {
+		int juros =500;
+		preco+=juros;
+		
+		System.out.println("parabens pela compra no boleto " + preco);
+	
+	
+}else {
+	
+	System.out.println("voce não escolheu nenhuma forma de pagamento ");
+	
+}
+
+}
+
+}
+
+
+public class PagaMento {
+
+	public static void main(String[] args) {
+		
+		Carro  car= new Carro();
+		
+		car.dinheiro(false, false, false);
+	
+	}
+
+}
+
+
+
